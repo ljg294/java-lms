@@ -1,5 +1,6 @@
-package nextstep.courses.domain.vo;
+package nextstep.courses.domain;
 
+import nextstep.courses.domain.SessionDetail;
 import nextstep.users.domain.NsUserTest;
 
 public class SessionInfoTest {

@@ -1,28 +1,23 @@
 package nextstep.courses.domain;
 
-import nextstep.courses.domain.vo.ImageSpec;
-
 public class SessionImage {
 
     private Long id;
 
     private ImageSpec imageSpec;
 
-    private DataStatus dataStatus;
-
-    public SessionImage() {
-    }
+    private BaseEntity baseEntity;
 
     public SessionImage(ImageSpec imageSpec,
                         Long creatorId) {
-        this(null, imageSpec, new DataStatus(creatorId));
+        this(null, imageSpec, new BaseEntity(creatorId));
     }
 
     public SessionImage(Long id,
                         ImageSpec imageSpec,
-                        DataStatus dataStatus) {
+                        BaseEntity baseEntity) {
         this.id = id;
         this.imageSpec = imageSpec;
-        this.dataStatus = dataStatus;
+        this.baseEntity = baseEntity;
     }
 }

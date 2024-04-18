@@ -1,4 +1,4 @@
-package nextstep.courses.code;
+package nextstep.courses.domain.code;
 
 import java.util.Arrays;
 

@@ -1,11 +1,5 @@
 package nextstep.courses.domain;
 
-import nextstep.courses.domain.vo.ChargeTest;
-import nextstep.courses.domain.vo.EnrollmentTest;
-import nextstep.courses.domain.vo.SessionInfoTest;
-import nextstep.courses.domain.vo.SessionPeriodTest;
-import nextstep.courses.exception.AlreadyEnrolledException;
-import nextstep.payments.domain.Payment;
 import nextstep.payments.domain.PaymentTest;
 import nextstep.users.domain.NsUserTest;
 import org.junit.jupiter.api.DisplayName;

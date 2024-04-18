@@ -1,10 +1,6 @@
 package nextstep.courses.domain;
 
-import nextstep.courses.code.ChargeType;
-import nextstep.courses.domain.vo.Charge;
-import nextstep.courses.domain.vo.Enrollment;
-import nextstep.courses.domain.vo.SessionDetail;
-import nextstep.courses.domain.vo.SessionPeriod;
+import nextstep.courses.domain.code.ChargeType;
 import nextstep.courses.exception.AlreadyEnrolledException;
 import nextstep.payments.domain.Payment;
 import nextstep.users.domain.NsUser;
@@ -27,10 +23,7 @@ public class Session {
 
     private Charge charge;
 
-    private DataStatus dataStatus;
-
-    public Session() {
-    }
+    private BaseEntity baseEntity;
 
     public Session(Course course,
                    SessionDetail info,
@@ -46,7 +39,7 @@ public class Session {
                 coverImage,
                 enrollment,
                 charge,
-                new DataStatus(creatorId));
+                new BaseEntity(creatorId));
     }
 
     public Session(Long id,
@@ -56,7 +49,7 @@ public class Session {
                    SessionImage coverImage,
                    Enrollment enrollment,
                    Charge charge,
-                   DataStatus dataStatus) {
+                   BaseEntity baseEntity) {
         validateSessionCharge(charge, enrollment);
 
         this.id = id;
@@ -66,7 +59,7 @@ public class Session {
         this.coverImage = coverImage;
         this.enrollment = enrollment;
         this.charge = charge;
-        this.dataStatus = dataStatus;
+        this.baseEntity = baseEntity;
     }
 
     public void toCourse(Course course) {
