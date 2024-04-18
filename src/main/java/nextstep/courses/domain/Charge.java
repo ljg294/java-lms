@@ -1,6 +1,6 @@
-package nextstep.courses.domain.vo;
+package nextstep.courses.domain;
 
-import nextstep.courses.code.ChargeType;
+import nextstep.courses.domain.code.ChargeType;
 
 public class Charge {
 

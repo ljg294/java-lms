@@ -1,7 +1,6 @@
-package nextstep.courses.domain.vo;
+package nextstep.courses.domain;
 
-import nextstep.courses.code.ChargeType;
-import org.junit.jupiter.api.BeforeEach;
+import nextstep.courses.domain.code.ChargeType;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

@@ -4,7 +4,7 @@ import nextstep.courses.util.DateTimeGenerator;
 
 import java.time.LocalDateTime;
 
-public class DataStatus {
+public class BaseEntity {
     private boolean deleted;
 
     private Long creatorId;
@@ -13,11 +13,11 @@ public class DataStatus {
 
     private LocalDateTime updatedAt;
 
-    public DataStatus(Long creatorId) {
+    public BaseEntity(Long creatorId) {
         this(false, creatorId, DateTimeGenerator.generateNowDateTime(), null);
     }
 
-    public DataStatus(boolean deleted,
+    public BaseEntity(boolean deleted,
                       Long creatorId,
                       LocalDateTime createdAt,
                       LocalDateTime updatedAt) {

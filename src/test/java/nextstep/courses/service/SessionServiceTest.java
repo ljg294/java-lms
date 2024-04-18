@@ -1,14 +1,10 @@
 package nextstep.courses.service;
 
-import nextstep.courses.code.ChargeType;
-import nextstep.courses.code.EnrollStatus;
-import nextstep.courses.code.ImageType;
-import nextstep.courses.domain.DataStatus;
-import nextstep.courses.domain.Course;
-import nextstep.courses.domain.Session;
-import nextstep.courses.domain.SessionImage;
+import nextstep.courses.domain.code.ChargeType;
+import nextstep.courses.domain.code.EnrollStatus;
+import nextstep.courses.domain.code.ImageType;
+import nextstep.courses.domain.*;
 import nextstep.courses.domain.repository.SessionRepository;
-import nextstep.courses.domain.vo.*;
 import nextstep.courses.exception.AlreadyEnrolledException;
 import nextstep.payments.domain.Payment;
 import nextstep.users.domain.NsUserTest;
@@ -51,7 +47,7 @@ public class SessionServiceTest {
                 new SessionImage(new ImageSpec(1024, 300, 200, ImageType.JPEG), 0L),
                 new Enrollment(EnrollStatus.OPEN, new Students(new ArrayList<>(List.of(NsUserTest.JAVAJIGI))), 2),
                 new Charge(ChargeType.PAID, 100_000L),
-                new DataStatus(0L));
+                new BaseEntity(0L));
 
         payment = new Payment(1L, 0L, 100_000L);
     }

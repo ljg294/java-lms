@@ -28,3 +28,7 @@ step2
     * test codes are also implemented
 * refactor/feedback
   * refactored codes based on feedback
+
+step3
+* refactor/feedback-step2
+  * refactored codes based on feedback from step 2

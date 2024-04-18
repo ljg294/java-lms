@@ -1,6 +1,6 @@
-package nextstep.courses.domain.vo;
+package nextstep.courses.domain;
 
-import nextstep.courses.code.ImageType;
+import nextstep.courses.domain.code.ImageType;
 
 public class ImageSpec {
 

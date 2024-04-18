@@ -1,4 +1,4 @@
-package nextstep.courses.domain.vo;
+package nextstep.courses.domain;
 
 import nextstep.courses.exception.AlreadyEnrolledException;
 import nextstep.users.domain.NsUser;

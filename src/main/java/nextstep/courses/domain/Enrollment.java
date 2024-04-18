@@ -1,6 +1,6 @@
-package nextstep.courses.domain.vo;
+package nextstep.courses.domain;
 
-import nextstep.courses.code.EnrollStatus;
+import nextstep.courses.domain.code.EnrollStatus;
 import nextstep.courses.exception.AlreadyEnrolledException;
 import nextstep.users.domain.NsUser;
 
@@ -24,18 +24,26 @@ public class Enrollment {
     }
 
     public void enroll(NsUser student) throws AlreadyEnrolledException {
-        if(!status.isOpen()) {
-            throw new IllegalArgumentException("강의가 모집중인 상태가 아닙니다.");
-        }
 
-        if(full()) {
-            throw new IllegalArgumentException("강의 제한인원이 초과 되었습니다.");
-        }
+        validateSessionOpen();
+        validateSessionFull();
 
         students.add(student);
 
         if(full()) {
             close();
+        }
+    }
+
+    private void validateSessionOpen() {
+        if(!status.isOpen()) {
+            throw new IllegalArgumentException("강의가 모집중인 상태가 아닙니다.");
+        }
+    }
+
+    private void validateSessionFull() {
+        if(full()) {
+            throw new IllegalArgumentException("강의 제한인원이 초과 되었습니다.");
         }
     }
 
